@@ -5,13 +5,11 @@
         <meta charset="utf-8">
     </head>
     <body>
-        
-        <form action="script.php" method="POST">
-            <h2>Cadastrar Aluno</h2>
-            <p>Diga seu nome: <input type="text" name="nome"></p>
-            <p>Diga sua idade: <input type="text" name="idade"></p>
-            <button type="submit">Cadastrar</button> 
+        <h1>FORMULÁRIO PARA INSCRIÇÃO DE COMPETIDORES</h1>
+        <form action="script.php" method="post">
+            <p>Seu nome: <input type="text" name="nome"></p>
+            <p>Sua idade:<input type="text" name="idade"></p>
+            <input type="submit" value="Enviar dados do computador">
         </form>
-
     </body>
 </html>
