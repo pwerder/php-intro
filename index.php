@@ -1,15 +1,30 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cadastro</title>
         <meta charset="utf-8">
+        <title>Cadastro</title>
+        <meta name="author" content="">
+        <meta name="description" content="">
     </head>
     <body>
+    
         <h1>FORMULÁRIO PARA INSCRIÇÃO DE COMPETIDORES</h1>
+        
         <form action="script.php" method="post">
-            <p>Seu nome: <input type="text" name="nome"></p>
-            <p>Sua idade:<input type="text" name="idade"></p>
-            <input type="submit" value="Enviar dados do computador">
+	    <?php
+            $mensagemDeErro = isset($_SESSION['mensagem-de-erro']) ? $_SESSION['mensagem-de-erro'] : '';
+            if(!empty($mensagemDeErro))
+            {
+                echo $mensagemDeErro;
+            }
+        ?>
+	    <p>Seu nome: <input type="text" name="nome" /></p>
+            <p>Sua idade: <input type="text" name="idade" /></p>
+            <p><input type="submit" value="Enviar dados do competidor" /></p>
         </form>
+    
     </body>
 </html>
