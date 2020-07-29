@@ -10,31 +10,6 @@ $categorias[] = 'adulto';
 $nome= $_POST['nome'];
 $idade = $_POST['idade'];
 
-if(empty($nome))
-{
-    $_SESSION['mensagem-de-erro'] = 'O nome não pode ser vazio, por favor preencha-o novamente';
-    header('location: index.php');    
-    return;
-}
-else if(strlen($nome) < 2)
-{
-    $_SESSION['mensagem-de-erro'] = "O nome deve conter mais de 3 carcteres";
-    header('location: index.php');
-    return;
-}
-else if(strlen($nome)  > 40)
-{
-    $_SESSION['mensagem-de-erro'] = "O nome é muito exetenso";
-    header('location: index.php');
-    return;
-}
-else if(!is_numeric($idade))
-{
-    $_SESSION['mensagem-de-erro'] = "Informe um numero na idade";
-    header('location: index.php');
-    return;
-}
-
 if($idade >= 6 && $idade <= 12)
 {
     for($i = 0; $i <= count($categorias); $i++)
