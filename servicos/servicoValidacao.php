@@ -21,7 +21,7 @@ function validaNome(string $nome) : bool
     }
     return true;
 }
-function validaIdade(string $idade)
+function validaIdade(string $idade) : bool
 {
     if(!is_numeric($idade))
     {
