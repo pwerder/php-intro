@@ -10,7 +10,6 @@ include "servicos/servicoMensagemSessao.php";
         <meta name="description" content="">
     </head>
     <body>
-    
         <h1>FORMULÁRIO PARA INSCRIÇÃO DE COMPETIDORES</h1>
         
         <form action="script.php" method="post">
@@ -27,7 +26,7 @@ include "servicos/servicoMensagemSessao.php";
                 echo $mensagemDeErro;
             }
         ?>
-	    <p>Seu nome: <input type="text" name="nome" /></p>
+	        <p>Seu nome: <input type="text" name="nome" /></p>
             <p>Sua idade: <input type="text" name="idade" /></p>
             <p><input type="submit" value="Enviar dados do competidor" /></p>
         </form>
